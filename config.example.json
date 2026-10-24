@@ -1,0 +1,22 @@
+{
+  "dataFile": "",
+  "fallbackImage": "",
+  "provider": {
+    "url": "",
+    "timeout_ms": 3000,
+    "headers": {}
+  },
+  "adapters": [
+    {
+      "platform": "example",
+      "url_pattern": "example\\.com\\/v\\/(\\d+)",
+      "api": "https://api.example.com/v/{id}",
+      "media_type": "video",
+      "fields": {
+        "title": "data.title",
+        "creator": "data.author.name",
+        "cover_url": "data.cover.url"
+      }
+    }
+  ]
+}

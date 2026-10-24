@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WatchHistoryRecord",
+  "type": "object",
+  "required": ["platform", "content_id", "title", "started_at"],
+  "properties": {
+    "id": { "type": "string" },
+    "platform": { "type": "string", "minLength": 1 },
+    "media_type": { "enum": ["video", "post", "thread", "repo"] },
+    "content_id": { "type": "string", "minLength": 1 },
+    "url": { "type": "string" },
+    "title": { "type": "string", "minLength": 1 },
+    "creator": { "type": "string" },
+    "duration_sec": { "type": "number", "minimum": 0 },
+    "started_at": { "type": "string" },
+    "ended_at": { "type": ["string", "null"] },
+    "progress": { "type": "number", "minimum": 0, "maximum": 1 },
+    "completed": { "type": "boolean" },
+    "seen": { "type": "boolean" },
+    "view_mode": { "enum": ["full_playback", "frames", "subtitle", "frames+subtitle", "ai_review", "metadata", "reference"] },
+    "rating": { "type": ["number", "null"], "minimum": 1, "maximum": 5 },
+    "mood": { "type": "string" },
+    "one_liner": { "type": "string" },
+    "cover_url": { "type": "string" },
+    "highlights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "text"],
+        "properties": { "t": { "type": "string" }, "text": { "type": "string" } }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "comments_learned": { "type": "array", "items": { "type": "string" } },
+    "source_agent": { "type": "string" },
+    "status": { "enum": ["watched", "metadata_only", "reference_only"] },
+    "private": { "type": "boolean" }
+  }
+}

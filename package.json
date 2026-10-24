@@ -1,0 +1,63 @@
+{
+  "name": "dsh-watch-history",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "跨平台观看历史 DSH 插件：卡片墙 + 记录 API + Provider/声明式适配",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H-Y-1-1/dsh-watch-history.git"
+  },
+  "homepage": "https://github.com/H-Y-1-1/dsh-watch-history#readme",
+  "bugs": {
+    "url": "https://github.com/H-Y-1-1/dsh-watch-history/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "watch-history",
+    "bilibili"
+  ],
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./store": "./src/store.mjs",
+    "./server": "./src/server.mjs",
+    "./schema": "./schema/history.schema.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "src",
+    "tools",
+    "assets/fallback.svg",
+    "schema",
+    "config.example.json",
+    "CONTRACT.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0"
+  },
+  "scripts": {
+    "test": "node test/store.test.mjs && node test/resolve.test.mjs && node test/auth.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  }
+}

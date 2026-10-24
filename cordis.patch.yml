@@ -1,0 +1,4 @@
+# watch-history 的挂载声明：装进 profile 后由 bundle 层 insert
+- insert:
+    - id: watch-history
+      name: dsh-watch-history

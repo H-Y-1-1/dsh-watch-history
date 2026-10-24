@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Watch History">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16283b"/>
+      <stop offset="1" stop-color="#0d141c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6fb3ff"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <g opacity="0.55" fill="none" stroke="#2d4a67" stroke-width="2">
+    <circle cx="320" cy="180" r="92"/>
+    <circle cx="320" cy="180" r="122"/>
+  </g>
+  <path d="M300 132 L392 180 L300 228 Z" fill="url(#accent)"/>
+  <rect x="424" y="88" width="116" height="10" rx="5" fill="#2d4a67"/>
+  <rect x="424" y="112" width="82" height="8" rx="4" fill="#22384f"/>
+  <rect x="424" y="236" width="116" height="8" rx="4" fill="#22384f"/>
+  <rect x="424" y="258" width="64" height="8" rx="4" fill="#1b2c3f"/>
+  <text x="320" y="312" text-anchor="middle" fill="#8b98a8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" letter-spacing="4">WATCH HISTORY</text>
+</svg>
