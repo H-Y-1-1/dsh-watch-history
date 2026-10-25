@@ -11,6 +11,12 @@
 - 本地 HttpOnly token + 同源校验
 - 不抓平台、不保存 cookie，数据由调用方写入
 
+## 截图
+
+![观看历史设置页](docs/screenshots/settings.png)
+
+![平台筛选与搜索](docs/screenshots/search.png)
+
 ## 安装（GitHub）
 
 DSH → Settings → Plugins → **Add plugin**，填本仓库地址。
