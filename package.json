@@ -45,7 +45,7 @@
     "dsh": ">=0.2.0"
   },
   "scripts": {
-    "test": "node test/store.test.mjs && node test/resolve.test.mjs && node test/auth.test.mjs"
+    "test": "node test/store.test.mjs && node test/resolve.test.mjs && node test/auth.test.mjs && node test/config.test.mjs"
   },
   "dsh": {
     "bundle": {

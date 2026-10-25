@@ -11,7 +11,8 @@ export function configFile(env = process.env) {
 
 export function loadConfig(file = configFile()) {
   try {
-    const j = JSON.parse(fs.readFileSync(file, 'utf8'));
+    const raw = fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
+    const j = JSON.parse(raw);
     return j && typeof j === 'object' ? j : {};
   } catch {
     return {};
