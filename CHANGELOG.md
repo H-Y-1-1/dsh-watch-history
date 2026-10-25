@@ -4,6 +4,7 @@
 
 - fix: `config.json` 现在兼容 UTF-8 BOM；之前带 BOM 时会被静默忽略并回退默认数据目录。
 - test: 新增 `test/config.test.mjs`，覆盖 BOM、正常 JSON、坏 JSON、缺失文件。
+- docs: README 按「先看三条 / 它做什么 / 安装 / 配置 / 排错」重写，并加入截图。
 
 ## 0.1.0 — 2026-10-24
 
