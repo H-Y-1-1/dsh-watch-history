@@ -1,8 +1,10 @@
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { addRecord } from '../src/add.mjs';
+import { loadConfig } from '../src/config.mjs';
 
 const file = process.argv[2];
 if (!file) {
@@ -11,7 +13,11 @@ if (!file) {
 }
 
 const rec = JSON.parse(fs.readFileSync(path.resolve(file), 'utf8'));
-const saved = await addRecord(rec);
+const cfg = loadConfig();
+const dataFile = process.env.WATCH_HISTORY_FILE
+  || cfg.dataFile
+  || path.join(os.homedir(), '.dsh', 'watch-history', 'history.jsonl');
+const saved = await addRecord(rec, dataFile);
 console.log(JSON.stringify({ ok: true, data: saved }));
 
 const here = path.dirname(fileURLToPath(import.meta.url));
