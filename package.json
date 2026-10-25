@@ -1,6 +1,6 @@
 {
   "name": "dsh-watch-history",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "跨平台观看历史 DSH 插件：卡片墙 + 记录 API + Provider/声明式适配",
   "license": "MIT",
@@ -38,6 +38,7 @@
     "config.example.json",
     "CONTRACT.md",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "engines": {

@@ -1,5 +1,7 @@
 # dsh-watch-history
 
+> 版本：0.1.1 · [Changelog](CHANGELOG.md)
+
 跨平台观看历史 DSH 插件：把「看过什么」存成统一记录，并在设置页用卡片墙展示。
 
 - 任意平台：`platform` 只是字符串，不要求插件提前支持
